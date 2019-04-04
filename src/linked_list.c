@@ -40,6 +40,7 @@ struct linked_list_node *linked_list_find(struct linked_list_node *head, void *d
 			return head;
 		head = head->next;
 	}
+	return NULL;
 }
 
 void linked_list_remove(struct linked_list_node **head, void *data,     
