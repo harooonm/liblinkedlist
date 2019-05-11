@@ -12,10 +12,10 @@ void linked_list_append(struct linked_list_node **head, void *data)
 }
 
 void linked_list_itr(struct linked_list_node *head,
-		void (*for_each)(struct linked_list_node *entry))
+		void (*for_each)(struct linked_list_node *entry, void *extra), void *extra)
 {
 	while(head){
-		for_each(head);
+		for_each(head, extra);
 		head = head->next;
 	}
 	
